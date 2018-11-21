@@ -1,0 +1,29 @@
+Mutaz Manaa 
+200750453
+mutazmanaa
+
+
+======================
+Matlab R2015a
+======================
+
+====
+Ex1
+====
+
+this project contains:
+1)README.txt: this file
+
+2)KMeans.m: applying Kmeans algorithim for cluster. 
+
+3)Part2: image segmentation using KMeans.
+
+3)BonusPart1: image segmentation using Kmeans adding additional feature.
+
+4)SpectralCluster.m: clustring for affinity matrix using the 2 algorithim NormalizedCuts and RatioCuts.
+
+5)Part4.m: image segmentation using SpectralCluster.
+
+6)Part5.m:  image segmentation using NystromNCuts.
+
+7)Report.pdf: result and analysis.

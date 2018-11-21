@@ -1,0 +1,33 @@
+Mutaz Manaa 
+200750453
+mutazmanaa
+
+
+==========================
+Matlab R2016a free Trial
+==========================
+
+====
+Ex3
+====
+
+this project contains:
+1)README.txt: this file
+
+2)classify_letters.m: fuunction classify given letter to one of 26 classes.
+
+3)letter_hinge_SGD.m: Multi-class Stochastic gradient descent.
+
+4)part4.m: - get minimal validation error by the ideal labda using letter_hinge_SGD to classifying letters
+
+5)classify_word.m - function classify word by given classifier and probabilities matrix A.
+
+6)Part6.m: function classify letters and words using letter_hinge_SGD,and return errors for each strategy.
+
+7)exerciseScript.m: script to show the results of Part4.m and Part6.m
+
+8)report: results and analysis.
+
+function attached to the exercise:
+conf_mat.m: plot confusion matrix.
+

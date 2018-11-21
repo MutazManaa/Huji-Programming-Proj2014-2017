@@ -1,0 +1,15 @@
+mutazmanaa
+
+
+This file contains:
+Mastermind.java that contains the code of the Mastermind game,
+wich know as Bulls and Cows 
+game that its matter to guess a random code at limited number of tries.
+Implemention: the games begins with get inputs from the user
+ belong to option of the game ,and calculate the number of bulls
+ and cows and consequntly update the user results based on his
+ guesses and the number of tries he can play.
+link for more onformation:en.wikipedia.org/wiki/Mastermind_(board_game).
+I avoid repeation code as possible and I use the do-while style to avoid it! 
+There is one class and One main method attached thats implement the game.
+Enjoy testing it :) ! 

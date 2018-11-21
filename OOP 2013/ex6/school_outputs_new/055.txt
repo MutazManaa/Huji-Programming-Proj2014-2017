@@ -1,0 +1,7 @@
+same_name_c.txt
+same_name_a.txt
+Same_a.txt
+.file8.txt
+.file7.txt
+.file6.txt
+.file5.txt

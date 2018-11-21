@@ -1,0 +1,70 @@
+mutazmanaa
+
+tarek72
+
+OOP EX3
+
+==================
+= Description: =
+==================
+Ex3 is a game of space wars, it has a 7 different kind of spaceship, each spaceship behave different from all the other space
+
+=========================================
+= Description of the special spaceship =
+=========================================
+
+the special spaceship behave oddly, it will try to always surprise the other spaceship and teleport behinde or infront them
+
+=============================
+= List of submitted files: =
+=============================
+
+
+
+*SpaceShip.java
+an abstract class that contains abstract methods , this class is the base class for all the the 7 spacesh
+
+*SpaceShipFactory.java is a class that contains a single static method that used by the driver to creat all the spaceships t
+
+*HumanControlledShip.java a class the represent a spaceship that is controlled by the user, it can accelerate turn right of left,fire,t
+
+*DrunkardShip.java a class that represent a crazy spaceship that controlled by the user,it extend the humanship class and it b
+
+
+*FloaterShip.java a class that represent a spaceship that just float around and does nothing.
+
+
+*RunnerShip.java a class that represent a spaceship that tries to avoid all other ships and try to run from the fight a
+
+
+*BasherShip.java a class that represent a spaceship that will try to collide with the nearest spaceship while attemping
+
+
+*AggressiveShip.java a class that represent a spaceship that pursues other ships and tries to fire at them.
+
+
+*Unit_tests.java this is tests to check the results of the functions and the classes.
+
+===========================================
+DESIGN
+===========================================
+in this exercise I chose to use the abstract design that it may contain a mix
+of methods declared with or without an implementation.
+and it is recommended if the classes that extend our abstract class have many
+common methods or fields ,thus i chose this design in this exercise because
+most of the classes of the ships for our exercise are common in the actions or
+the behaviors that they do so it will be easy to use the abstract design
+while it will be hard sometimes(disadvantage),if we decide to change a ship
+behavior in one class not all , this change will impact all the classes
+that use this method , so if we want to modify and add new aspects for example
+the special ship we have to do it in a separated method.
+
+===========================================
+Implementation Issues
+===========================================
+it was really hard to find what we had to implement exactly in each class and
+understanding the abstract term and when should we use it , it took a lot of
+time to begin in writing the code because we had to read the supplied codes
+that you gave to us to understand in what these things are for or the purposes
+of the classes and the methods .
+ 

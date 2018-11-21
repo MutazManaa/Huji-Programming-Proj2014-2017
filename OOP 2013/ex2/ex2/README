@@ -1,0 +1,58 @@
+mutazmanaa
+
+
+******************************************************************************************************
+About the Project:
+This is a project that contains some calsses for latex language that used 
+to get good format for texts & equations.The classes are:
+
+Classes:
+1)MathTerm: this class is the super class that the whole essential fields 
+related to the different printing styles and relevant Parameter for 
+the math expression.
+
+2)SimpleMathTerm: this class is extends MathTerm, it get mathTerm and check
+if numeric, and can return it with the decimal precision required and print 
+the MathTerm either numeric or string.
+
+3)BinaryMathTerm:this class extends MathTerm class,it get two MathTerms included in.
+
+4)SimpleBinaryOpMathTerm:this class extends BinaryMathTerm & include simple math expression
+ either one variable or one simple expression contains two MathTerms and mathematical operation as required.
+ 
+5)SumMathTerm:this class is extends MathTerm and represent series (segma) with super limit and sub limit 
+as MathTerms and and the intern expression also as MathTerm .
+
+6)BracketsMathTerm: this class extends MathTerm,it represent a MathTerm between brackets.
+
+7)FractionMathTerm: this class extends BinaryMathTerm, it represent a fraction between two mathTerms.
+
+*************************************************************************************************************
+Design: I used an inheritance OOP design and protected field. One super class for all and One SUB-super class for 
+some classes , I have use the keyword super to take advantage of the fields in the the super classes.
+I also use overriding for the toLatex method to use it in correct form according to required printing style in the 
+exercise on the different classes.
+**************************************************************************************************************
+Implementation: the one interesting implementation is the Field "exponentStr" in the MathTerm Class that catch the
+suitable string format for the different classes, also I get help from web forums to implement the "isNumeric" method 
+in SimpleMathTerm Class and setPrecisionDigits in the same class and then I get short toLatex method.
+********************************************************************************************************************  
+Answer to the question: 
+I will build a class called IntegramMathTerm that extends MathTerm, the constructor get a MathTerm mathTermand 
+a char integralVariable that symbolizes the variable we want to do integral about-("d"+"sign"+).
+the toLatex method is implemented to represent an integral format that I guess to be
+("//integral"+mathTerm+" d"+sign+)
+note that if we want also to get triple integral or  double integral, we will add to the constructor an additional
+variable that get the required integral (normal,double,triple) and to check in the latex method what is the value of
+this variable the to represent it and change the char variable (that get the constructor) to String one that include
+the sequence of the integral we want (dxdydz-->the sequence xyz).then the laTex will changed as required.
+
+
+ 
+
+
+
+
+
+
+

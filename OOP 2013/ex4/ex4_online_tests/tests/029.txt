@@ -1,0 +1,14 @@
+# complex - a series of add, delete, capacity that does not affect the capacity
+A: hash Hash guitar piano violin DAST CLIDS Infi Hello Bye Test Algebra Boo DAST CLIDS Shalom Kushkush hello hi naal DAST CLIDS oink
+size 19
+capacity 32
+delete Boo true
+delete Infi true
+delete Hello true
+delete hello true
+delete Hash true
+add Hash true
+delete Hash true
+delete Bye true
+size 13
+capacity 32

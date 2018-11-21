@@ -1,0 +1,86 @@
+CHIP Mul{
+    IN a[16], b[16];
+    OUT out[16];
+
+    
+    PARTS:
+
+    //make the numbers positive
+
+    Mux16(a=false,b=true,sel=a[15],out=asign);
+    Xor16(a=asign,b=a,out=app);
+    Add16(a[0]=a[15],a[1..15]=false,b=app,out=ap);
+
+    Mux16(a=false,b=true,sel=b[15],out=bsign);
+    Xor16(a=bsign,b=b,out=bpp);
+    Add16(a[0]=b[15],a[1..15]=false,b=bpp,out=bp,out[0]=b0,out[1]=b1,out[2]=b2,out[3]=b3,out[4]=b4,out[5]=b5,out[6]=b6,out[7]=b7,
+                                                 out[8]=b8,out[9]=b9,out[10]=b10,out[11]=b11,out[12]=b12,out[13]=b13,out[14]=b14);
+
+
+    ShiftLeft(in=ap,out=shift1);
+    ShiftLeft(in=shift1,out=shift2);
+    ShiftLeft(in=shift2,out=shift3);
+    ShiftLeft(in=shift3,out=shift4);
+    ShiftLeft(in=shift4,out=shift5);
+    ShiftLeft(in=shift5,out=shift6);
+    ShiftLeft(in=shift6,out=shift7);
+    ShiftLeft(in=shift7,out=shift8);
+    ShiftLeft(in=shift8,out=shift9);
+    ShiftLeft(in=shift9,out=shift10);
+    ShiftLeft(in=shift10,out=shift11);
+    ShiftLeft(in=shift11,out=shift12);
+    ShiftLeft(in=shift12,out=shift13);
+    ShiftLeft(in=shift13,out=shift14);
+    ShiftLeft(in=shift14,out=shift15);
+    ShiftLeft(in=shift15,out=shift16);
+    
+    
+    Mux16(a=false,b=ap,sel=b0,out=sum1);
+    Mux16(a=false,b=shift1,sel=b1,out=sum2);
+    Mux16(a=false,b=shift2,sel=b2,out=sum3);
+    Mux16(a=false,b=shift3,sel=b3,out=sum4);
+    Mux16(a=false,b=shift4,sel=b4,out=sum5);
+    Mux16(a=false,b=shift5,sel=b5,out=sum6);
+    Mux16(a=false,b=shift6,sel=b6,out=sum7);
+    Mux16(a=false,b=shift7,sel=b7,out=sum8);
+    Mux16(a=false,b=shift8,sel=b8,out=sum9);
+    Mux16(a=false,b=shift9,sel=b9,out=sum10);    
+    Mux16(a=false,b=shift10,sel=b10,out=sum11);
+    Mux16(a=false,b=shift11,sel=b11,out=sum12);
+    Mux16(a=false,b=shift12,sel=b12,out=sum13);
+    Mux16(a=false,b=shift13,sel=b13,out=sum14);
+    Mux16(a=false,b=shift14,sel=b14,out=sum15);
+
+
+
+    //***********
+    //* SUMMING *
+    //***********
+
+
+    Add16(a=sum1,b=sum2,out=sum1t2);
+    Add16(a=sum3,b=sum4,out=sum3t4);
+    Add16(a=sum5,b=sum6,out=sum5t6);
+    Add16(a=sum7,b=sum8,out=sum7t8);
+    Add16(a=sum9,b=sum10,out=sum9t10);
+    Add16(a=sum11,b=sum12,out=sum11t12);
+    Add16(a=sum13,b=sum14,out=sum13t14);
+
+    Add16(a=sum1t2,b=sum3t4,out=sum1t4);
+    Add16(a=sum5t6,b=sum7t8,out=sum5t8);
+    Add16(a=sum9t10,b=sum11t12,out=sum9t12);
+    Add16(a=sum13t14,b=sum15,out=sum13t15);
+
+    Add16(a=sum1t4,b=sum5t8,out=sum1t8);
+    Add16(a=sum9t12,b=sum13t15,out=sum9t15);
+
+    Add16(a=sum1t8,b=sum9t15,out=sum1t15);
+
+
+    //sign management
+    Xor(a=a[15],b=b[15],out=sign);
+    Mux16(a=false,b=true,sel=sign,out=sign16);
+    Xor16(a=sign16,b=sum1t15,out=sum);
+    Add16(a[0]=sign,a[1..15]=false,b=sum,out=out);
+    
+}

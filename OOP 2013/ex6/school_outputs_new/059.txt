@@ -1,0 +1,16 @@
+file0.a
+file1.a
+file2.a
+Warning in line 12
+.file5.txt
+.file6.txt
+.file7.txt
+.file8.txt
+Same_a.txt
+file1.a
+file1.txt
+file2.a
+file2.txt
+file4.txt
+same_name_a.txt
+same_name_c.txt

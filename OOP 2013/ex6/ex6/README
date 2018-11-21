@@ -1,0 +1,78 @@
+mutazmanaa
+
+=====
+files:
+=====
+
+==general (filescript) package:==
+Command.java: a class that contains a command: a filter and an order.
+CommandFileException.java: this exception is raised by the parser if an error
+is found in the command file format.
+FileSort.java: sorting class.
+MyFileScript.java: this is the main class that controls the program.
+Parser.java: reading the commands file, creating the orders and filters for each section
+Type1error.java: a superclass for warnings.
+Type2Error.java: a superclass for errors
+
+==filters package:==
+AllFilter.java: the all files filter.
+AttributeFilter.java: superclass for attribute- based filters.
+BetweenFilter.java: the between filter.
+ContainesFilter.java: the contains filter.
+ExecutableFilter.java: the executable filter.
+FileFilterFactory.java: factory class that creates filters
+FileNameFilter.java: the name matching filter
+FilterException.java: a superclass for exceptions in filters.
+GreaterThanFilter.java: the greater than filter.
+HiddenFilter.java: the hidden file filter.
+IllegalFilterValueExeption.java: exception raised when filter value is illegal.
+NameFilter.java: a superclass for filters that test the name of the file.
+NegationFilter.java: a decorator class for the reversing filters.
+NumericFilter.java: a superclass for filters that test number related attributes.
+PrefixFilter.java:  the name prefix filter.
+SmallerThanFilter.java: the smaller than size filter.
+SufixFilter.java: the file name suffix filter.
+UnknownFilterException.java: exception thag indicates illigal name for filter
+WriteableFilter.java: the writeable filter.
+
+==orders package:==
+AbsOrder.java: implements the abs order with lexicographic order as a base.
+FileOrder: this is the front for the orders. it handles the converting
+the parsed string and well as reversing order.
+IllegalOrderStringException: this exception is raised when a bad order name
+is passed to FileOrder namelly when the order string does not contain a valid
+name
+Order.java: this is the basic interface of all orders.
+OrderException: this is the basic exception for orders and is meqant for
+extending.
+SizeOrder.java: implement the size order.
+TextOrders.java: a superclass for orders relying on text comparison.
+TypeOrder.java: implements the type order.
+
+======
+Design:
+======
+
+==parser:==
+my parser iterate over the command and returns one command (section) each iteration.
+
+=Sorting:=
+I used a simple merge sort algorithm, as it's a stable and efficiant algorithm.
+before sorting by the given order I sort by abs, to make sure equivalent files
+goes in the right order.
+
+==filters:==
+The filters have their own package, to make the code clearer.
+creating filters is done only in FilterFactory class, who gets a line and
+returns the relevant filter object.
+i've created superclasses for filters with similar function: Numeric, name and
+attributes based filter classes.
+
+==Orders:==
+the orders package is very similar to filters package in it's structure:
+the main difference is that i did not use factory but a decorator class to
+ analyze the line and create objects, as it's smaller package.
+
+==errors:==
+the errors are handled in two places: in main - type II errors/IO errors
+and the parser handles warnings.

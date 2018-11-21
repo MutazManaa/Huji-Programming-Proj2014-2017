@@ -1,0 +1,16 @@
+
+
+ Created on: Sep 8, 2015
+     Author: mutazmanaa
+===============
+Design for ex2:
+================
+I implement three parsers for the Parameters file,queries file and songs file.
+I have used inheritance and polymorphisim in the type of songs that I impelement
+the Song class as super class and two sub classes: LyricsSong and InstrumentalSong.
+in the super class I declared the common fields of the songs as protected  and in 
+the two subClasses I add the diffirent feilds as private.
+we can see the casting between Song and LyricsSong or InstrumentalSong as trivial when
+we save the songs in the Songs vector.
+best regard
+Mutaz

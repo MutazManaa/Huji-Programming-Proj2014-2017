@@ -1,0 +1,133 @@
+mohamedrayan, mutazmanaa
+Mohamed Rayan (204734420), Mutaz Manaa (200750453)
+Ex: 1
+
+FILES:
+osm.c -- this is the main file that contain all the code thats we run to get the
+ run time. 
+osm.h -- the heaeder file to osm.c , supplied by course stuff.
+readme -- this file. 
+
+
+
+		$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	                               README 
+                                         OS 1
+				rayan , manaa			     
+		$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+__________
+ANSWERS:
+__________
+
+
+********************************************************************************
+Task1:
+********************************************************************************
+breif about WhatIDo doing:
+1.creat a folder called "os" by mkdir("os", 0775) command.
+2.inside the folder os , it is creat an folder called "os/2015" by mkdi("os/2015", 0775).
+3.brk:change the location of the program break.
+	brk(0)                              = 0x7c6000 - fail, return current.
+	brk(0x7e7000)                       = 0x7e7000 - success, return new.
+4.creat a file called info in the folder above by open with O_creat in open command.
+5.fstat:check the file status and it shows that the size of the file was zero.and 
+  3 is the minimal unused file descriptor, S_IFCHR: character device.
+6. mmap: creates a new mapping in the virtual address space of the calling process.
+7.write: here the program writes into the file by its file descriptor, wirte into it 
+  35 space " /x20 in hex  " and malloced 124 bytes. 
+8.close(3): Closes the file descriptor at index 3.
+munmap(0x7fe4290f1000, 4096):Unmap pages from memory starting at the address 
+0x7fbd11e0c000 and continues for 4096.The call returns 0 which indicates success.
+unlink("os/2015/info"): remove the file info.
+rmdir:("os/2015/"): remove the directiory 2015 from os.
+rmidr("os/"): remove the os directory.
+exit group(0):exit all threads in a process.
+exited withe 0: exit success.
+
+in general the program creats two nested folders and inside if the last one creat
+ a file and write to it some information and then it delets the file and the 
+ both folders and exit in success.
+
+don't forget to say tat the program receives parameter. 
+
+********************************************************************************
+Task2:
+********************************************************************************
+question1: 
+yes there are some side effects may happen, one of this side effect will be when
+the process writes an important data to some file and the interrupt writes to 
+the same file it may lead to overriding the file, witch leads to lose the data 
+from the proxess
+
+another side effect may happen , lets assume that some process is tries to do
+ some actions thats depends on time, it may be wite some seconds or waite until 
+ reading some file, then the interrupt may take longer time and then the process
+  wil return to run long time
+after the wanted time.
+
+------------------------------------------------
+
+blocking all the coming interrupts not always will be the solution, because the 
+interrupts usually occuer when something important shoud and goes to happen like
+get network packets update clock, and if the interrupt was blocked it may lead 
+to this importnat things to happen not in time or not at all. 
+
+********************************************************************************
+Task3:
+********************************************************************************
+here we used the osm.c , and osm.h files. to measure the time it takes to
+perform three different operations: a simple instruction (such as addition or 
+bitwise and), an empty function call with no arguments, and a trap
+and the results was ( CS lap computers ) in Nano seconds :
+simnple  instruction: 0.404040
+function: 1.818849
+trap:139.096576
+
+we build a function that convert time from secinds to nano seconds and we use 
+the gettimeof day to calculate differnces between two times.
+for the three operations, I mesure the time befor it begin and after finished, 
+I measure for many times (5000) and all check in the loop I measure the same 
+operation one by one also 15 times and then I calculate the average for one 
+operation in Nano seconds.This can be more exact than running the operation one
+time and mesure it.
+we have notice that on the cs lap computers when we run the program we have the
+same result every time and also when we run the program on our machines we have 
+the same result every time (not the same of the lap computers).
+
+in general we try to build our library functions in the way we can get more 
+exact results and if we set a large number of loops we can get more and more 
+exact.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

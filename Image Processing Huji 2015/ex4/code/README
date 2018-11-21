@@ -1,0 +1,38 @@
+mutazmanaa
+200750453
+
+===========Maatlab version and and Platform========
+Matlab version : R2015a
+Platform: Windows 10 
+===================================================
+
+==================
+files submitted:
+==================
+1) HarrisCornerDetector.m : HARRISCORNERDETECTOR Extract key points from the image.
+2) sampleDescriptor.m: SAMPLEDESCRIPTOR Sample a MOPS−like descriptor at given positions in the image.
+3) findFeatures.m:  FINDFEATURES Detect feature points in pyramid and sample their descriptors.
+4) matchFeatures.m: MATCHFEATURES Match feature descriptors in two desciprtors.
+5) applyHomography.m:  APPLYHOMOGRAPHY Transform coordinates from one set of points using homography matrix.
+6) ransacHomography.m: RANSACHOMOGRAPHY Fit homography to maximal inliers given point matches using the RANSAC algorithm.
+7) displayMatches.m: DISPLAYMATCHES Display matched pt. pairs overlayed on given image pair.
+8) accumulateHomographies.m: ACCUMULATEHOMOGRAPHY Accumulate homography matrix sequence.
+9) renderPanorama.m: RENDERPANORAMA Renders a set of images into a combined panorama image.
+10) examplePanoramas.m: This script generates all of the provided example panoramas.
+11) myPanorama.m: produces my panaromas.
+12) cafe1.jpg: an image to my panorama.
+13) cafe2.jpg: an image to my panorama.
+13) cafe3.jpg: an image to my panorama.
+15) garden1.jpg: an image to my panorama.
+16) garden2.jpg: an image to my panorama.
+17) garden3.jpg: an image to my panorama.
+18) nonMaximumSuppression.m: Find local maxima of corner metric matrix.
+19) leastSquaresHomography.m: LEASTSQUARESHOMOGRAPHY Compute least square fit to homography transforming between two sets of points.
+20) spreadOutCorners.m: SPREADOUTCORNERS Detects Harris corners in an nxm grid of sub-images of an image.
+21) generatePanorama.m: GENERATEPANORAMA Load set of RGB frames and combine them into a single RGB panorama.
+22) imReadAndConvert: get image file and code for representation,read the image and convert it to the give code representation. 
+23) GaussianPyramid.m: return gaussian pyramid.
+24) blurInImageSpace.m: get an image and size of gausian and blur it by convilution.
+25) pyramidBlending.m: return the blending image after applying the algorithim in the exercise 3.
+
+

@@ -1,0 +1,43 @@
+mutazmanaa
+
+
+
+===========Maatlab version and and Platform========
+Matlab version : R2015a
+Platform: Windows 10 
+===================================================
+
+==================
+files submitted:
+==================
+
+1)imReadAndConvert.m: get image file and code for representation,
+read the image and convert it to the give code representation.
+
+2)imDisplay.m: get image file as input and code for representation,
+display the image file in the given code representation format.
+
+3)transformRGB2YIQ.m: get an RGB image and  transforms it to the YIQ 
+format.
+
+transformYIQ2RGB.m: get an YIQ image and transforms it to RGB format.
+
+4)histogramEqualize.m: get an image and show the equalization histogram.
+
+5)quantizeImage.m: get grayscale or RGB image to be quantized, and the 
+number of intensities your output imQuant image should have, and 
+the maximum number of iterations of the optimization procedure.
+ show an optimal quantization of a given image (grayscale or RGB) and 
+ and calculate the error. when we creat an intitial division we avoid an
+empty segments becasuse the system will crash when divide by zero,thus, no
+empty segments
+
+6)testImg1.jpg: image to test
+7)testImg2.jpg: image to test
+
+note: I assume that all the inputs are correct and no need to check 
+correctness of the input.
+=========================================================================
+I have uused the algorithims given in the lectur and saw examples in the 
+internet. In Matlab I use changem and imadjust functions to do mapping.s 
+ 

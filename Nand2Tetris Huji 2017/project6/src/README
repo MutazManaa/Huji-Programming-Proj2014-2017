@@ -1,0 +1,24 @@
+aness.zurba, mutazmanaa
+===============================================================================
+Anass AlZurba, ID 20649999-8, Anass.Alzurba@mail.huji.ac.il
+Mutaz Manaa,   ID 20075045-3, Mutaz.manaa@mail.huji.aci 
+===============================================================================
+
+                        	Project 6 - Assembler
+                            --------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+
+Code.java			- The code module, translates into machine code
+CommandType.java	- defines 3 types of machine code commands
+Assembler.java		- runs the whole program
+Parser.java			- goes over the text line by line
+SymbolTable.java	- handles the symbol table and memory addresses
+
+
+Remarks
+-------
+None

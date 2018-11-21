@@ -1,0 +1,37 @@
+mutazmanaa, mohamedrayan
+Mutaz Manaa (200750453), Mohamed Rayan (204734420)
+EX: 2
+
+FILES:
+Thread.h--a header file that contain the function of a one thread
+Thread.cpp--a file implement for one thread, it contain all functions ad feilds of one 
+thread.
+uthreads.h--a file required to implement in the exercise.
+uthreads.cpp--a file implement the library
+
+
+REMARKS:
+we use a linked list of cpp in our design to represent Ready and blocked lists, and use 
+three lists for the the three colours of ready status in this thre colours.
+I try to use the built-in function "remove" in the list library in cpp but it doesn't work
+,so I implement special and easy remove function from the lists.
+I use an array to know the new Id of new threads and wen I get the new Id , I put "1" in 
+the id index in that array.
+
+ANSWERS:
+1)RR-cons: no special cases for tasks in common on operating systems that mau have many problems.
+RR-pros: no starvation occur.
+PQ-cons:starvation happen for lower priority tasks when we deal with large number of tasks
+of high priorities
+PQ-pros:response time amd waitting time are low then it finish tasks faster.
+
+2)Reading a file from harddisk may take a lot of time so we can block the thread relevant 
+to reading the file and wait for it until it finishes. 
+
+
+
+
+
+
+
+

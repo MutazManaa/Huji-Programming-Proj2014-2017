@@ -1,0 +1,43 @@
+mutazmanaa
+200750453
+
+===========Maatlab version and and Platform========
+Matlab version : R2015a
+Platform: Windows 10 
+===================================================
+
+==================
+files submitted:
+==================
+1) GaussianPyramid.m: return gaussian pyramid.
+2)LaplacianPyramid.m: return laplacian pyramid.
+3)LaplacianToImage.m: return an image from given laplacian pyramid
+4)renderPyramid.m: return a single black image in which the pyramid levels of
+                    the given pyramid pyr are stacked horizontally.
+5)displayPyramid.m: displays single black image returned in renderPyramid.
+6)pyramidBlending.m: return the blending image after applying the algorithim in the exercise.
+7)blendingExample1.m: first script to perform pyramid blending.
+8)blendingExample2.m: second script to perform pyramid blending.
+
+=========================
+Answers to the Questions:
+=========================
+answer for part 3 Q1:
+when we get some level and multibly it by number bigger than 1 or less than 1
+we make the level frequency range more strong or more weak , in other words we
+want to bold some range of frequency and to minor an other range..that ranges
+that we want to control on.
+
+answer for part 4 Q1:
+as we learn and noticed that big filter led to big gaussian and then good blending
+, but if the filter is a lot big that not siutable to the image it will led to bad 
+blending.
+
+answer for part 4 Q2:
+using more and more levels for blending is led to good blending and more pure blending
+, and when we use small number of levels like 1 is the original message and 2 is
+little blinding and when we goes on we get a softer blending that is the matter.
+
+Notice:1) my imReadAndConvert in my exercise 1 was wrong , I hope that I fixed it.
+2)the pictur of the poletiian people express my opinion about politcians and the whole politicians not only 
+performed in the picture.

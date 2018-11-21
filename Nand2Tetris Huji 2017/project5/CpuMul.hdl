@@ -1,0 +1,68 @@
+/**
+* This chip is an extension of the book CPU by using the extended ALU.
+* More specificly if instruction[15]==0 or (instruction[14] and instruction[13] equals 1)
+* the CpuMul behave exactly as the book CPU.
+* While if it is C instruction and instruction[13] == 0 the output will be D*A/M 
+* (according to instruction[12]).
+* Moreover, if it is c instruction and instruction[14] == 0 it will behave as follows:
+*
+* instruction:  | 12 | 11 | 10 |
+* _____________________________
+* shift left D  | 0  | 1  | 1  |
+* shift left A  | 0  | 1  | 0  |
+* shift left M  | 1  | 1  | 0  |
+* shift right D | 0  | 0  | 1  |
+* shift right A | 0  | 0  | 0  |
+* shift right M | 1  | 0  | 0  |
+**/
+
+CHIP CpuMul{
+
+    IN  inM[16],         // M value input  (M = contents of RAM[A])
+        instruction[16], // Instruction for execution
+        reset;           // Signals whether to re-start the current
+                         // program (reset=1) or continue executing
+                         // the current program (reset=0).
+
+    OUT outM[16],        // M value output
+        writeM,          // Write into M? 
+        addressM[15],    // Address in data memory (of M)
+        pc[15];          // address of next instruction
+
+     PARTS:
+
+     //calc A value
+    Not(in=instruction[15],out=isAcmd);
+    Or(a=instruction[5],b=isAcmd,out=writeA);
+    Mux16(a=outALU,b=instruction,sel=isAcmd,out=inA);
+    ARegister(in=inA,load=writeA,out=outA,out[0..14]=addressM);
+
+    //ALU
+    Mux16(a=outA,b=inM,sel=instruction[12],out=outAM);
+    ExtendAlu(x=outD,y=outAM,instruction[7..8]=instruction[13..14],
+                instruction[0..5]=instruction[6..11],zr=zrALU,ng=ngALU,out=outALU,out=outM);
+
+    //JUMP                  
+    Or(a=zrALU,b=ngALU,out=zrongALU);
+    Not(in=zrongALU,out=psALU);
+    And(a=instruction[0],b=psALU,out=j1out);
+    And(a=instruction[1],b=zrALU,out=j2out);
+    And(a=instruction[2],b=ngALU,out=j3out);
+    Or(a=j1out,b=j2out,out=j12out);
+    Or(a=j12out,b=j3out,out=jout);
+
+    And(a=instruction[15],b=jout,out=jump);
+        
+    PC(in=outA,load=jump,inc=true,reset=reset,out[0..14]=pc);
+
+
+
+    //Write DM
+    And(a=instruction[15],b=instruction[4],out=writeD);
+    DRegister(in=outALU,load=writeD,out=outD);
+    
+    And(a=instruction[15],b=instruction[3],out=writeM);
+
+
+
+}

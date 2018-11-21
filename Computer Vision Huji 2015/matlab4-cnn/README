@@ -1,0 +1,27 @@
+Mutaz Manaa 
+200750453
+mutazmanaa
+
+
+===========================
+Matlab R2015b Student Trial
+===========================
+
+====
+Ex4
+====
+
+this project contains:
+1)README.txt: this file
+2)batch_size_script.m: check batch size realativety.
+3)momentum_script.m: check momentum relativety
+4)lambda_script.m: check lambda relativety
+5)Part4.m: initial wieghts by zeros.
+6)part5.m: changing learning rate
+8)best_small_script.m: choosing best config. parameters.
+9)small_large_script.m: build deeper CNN
+10)best_script.m - choosing best config. of parameters and layer variables.
+11)report: results and analysis.
+
+
+

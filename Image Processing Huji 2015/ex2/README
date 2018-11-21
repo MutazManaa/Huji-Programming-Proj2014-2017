@@ -1,0 +1,49 @@
+mutazmanaa
+200750453
+
+==========
+    ex2
+==========
+
+==============
+Matlab R2015a
+==============
+
+================================
+this exercis contain the files:
+================================
+
+1)DFT.m: get an signal and return its fourier transform.
+2)IDFT.m: get an fourier vector and return the original signal.
+3)DFT2.m: get an image and return its fourier 2D transform.
+4)IDFT2.m: get an tranform fourier for image and return the original one.
+5)convDerivative.m: get and image and computes gradient (magnitude) after derivate the image in x and y directions.
+6)fourierDerivative.m: get an image and computes the gradient by derivate the image by Fourier transform.
+7)blurInImageSpace.m: get an image and size of gausian and blur it by convilution.
+8)blurInFourierSpace.m: get an image and size of gausian and blur by Forurier.
+
+
+==========
+Questions:
+==========
+Q1: Why did you get two different magnitude images?
+A: as we learned convoluation done by the vector [1 0 -1] then when we compute the derivation we lose data 
+(from the analog signal)between the pixels that's mean that the derivative by this vector is not so exact.
+on the other hand the derivative by fourier transform more exact because it is up-to-a-constant, then it is more
+exact than the do derivation by vector.
+
+Q2: What happens if the center of the gaussian (in the space domain) will not be at the (0,0)
+of the image? Why does it happen?
+A: the image will shiffted because as we learn in lecture 2 slide ine that – Blur: Replace a pixel with an average of its
+neighbors and Edge: Replace a pixel with a difference of its neighbors the when we shift the gausian we shift the result of
+the conoluation.
+
+
+Q3:  What is the difference between the two results (Blurring in image space and blurring in
+fourier space)?
+
+A: I noticed that there is a black frame around the picture when I use the convoluation in the blur picture 
+, but not at the fourier blur.
+
+
+

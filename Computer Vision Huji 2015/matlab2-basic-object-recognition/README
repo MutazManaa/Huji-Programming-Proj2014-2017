@@ -1,0 +1,42 @@
+Mutaz Manaa 
+200750453
+mutazmanaa
+
+
+==========================
+Matlab R2016 a free Trial
+==========================
+
+====
+Ex2
+====
+
+this project contains:
+1)README.txt: this file
+
+2)Part1.m: svm classification for intensites. 
+
+3)RidgeTrain.m: implements inhomogeneous Ridge-regression training.
+
+4)Part3.m: Ridge classification for intensites.
+
+5)HOG.m: function applies HOG measurements to a grayscale image
+
+6)Part5.m: svm classification for HOG vectors.
+
+7)Part6.m: Ridge classification for HOG vectors.
+
+8)Part7.m: adaboost classification for HOG vectors classidied by SVM.
+
+9)Part8.m: adaboost classification for HOG vectors classified by Ridge.
+
+10)Report.pdf: result and analysis.
+
+
+helping functions:
+1)MapImgs.m: map images to vector in d dimennsions. 
+
+2)TagImags.m: taging the image by 0 or 1 related if positive or negative.
+
+3)mapTmgsToHOg.m: map images to HOG vectors.
+

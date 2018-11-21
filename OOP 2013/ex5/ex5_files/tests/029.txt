@@ -1,0 +1,8 @@
+# extreme case: delete the same value twice in data-constructor mode
+3 4 2 1
+size 4
+contains 1 2
+delete 4 true
+contains 2 0
+delete 4 false
+copy

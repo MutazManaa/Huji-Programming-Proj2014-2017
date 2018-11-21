@@ -1,0 +1,96 @@
+mutazmanaa
+
+
+
+**Submitted file :
+1.AvlTree.java
+2.Node.java
+3.README
+=============================================================================================
+**About the submitted files :
+-Node class : the class that i have implemented in order to use it in implementing the AvlTree class
+, its helps me to use the right and left and the parent and the vlaues of each subTree , includes 
+the methods :
+* Node: the Node constructor.
+
+* getKey: return the key of the node.
+
+* setKey: sets the node’s key.
+
+* getParent: return the parent of the node.
+
+* setParent: sets the node’s parent.
+
+* getRightNode: return the right of the node.
+
+* setRightNode: sets the node’s right.
+
+* getLeftNode: return the left of the node.
+
+* setLeftNode: sets the node’s left.
+
+-AvlTree class : the main class that implements the data structure - Avl tree
+, in cludes the methods:
+******* the methods that we must do :
+
+* AvlTree : A default constructor.
+
+* AvlTree(int[] data) : A data constructor a constructor that builds the tree by adding the
+elements in the input array one-by-one. If the same value appears twice
+(or more) in the list, it is ignored.
+
+*AvlTree(AvlTree tree): a copy constructor that get tree and copy it to another one by add method .
+
+* add(int newValue) : Add a new node with key newValue into the tree , its take help from the method
+balancedAdd and each time its do add to a node its check if the balance changed.
+* contains(int searchVal) : Does tree contain a given input value.
+* delete(int toDelete) : Remove a node from the tree, if it exists , take help from the method 
+balancedDelete
+, and each time its delete a node its do balance for the tree.
+* size() : return number of nodes in the tree.. I haven't us size++ in add and remove but I have an
+recursiveSize function that can count nodes because may you give me a tree without to construct it
+then it does'nt work by add to know the size.
+-------
+**** the methods that i implement in order to use it in implementing the main methods :
+* balancedAdd : adds the value to the avl tree by the rules of avl , helps the add method to add.
+* getNode : to get the root of the tree.
+* search(int toFind) : searches a node( that have the toFind value ) in the tree.
+* balancedDelete(Node toDelete) : deletes a node from the tree , helpps the delete method.
+* treeMinimum(Node node) : return the node that have the minimum value.
+* successor(Node node) : searches and returns the successor(the successor of one node = the minimum
+node that bigger than this node) of a node.
+* recursiveSize(Node node) : visit each node in the tree once and counts it but
+the first node(head) (because this i did +1 in size method).
+* fixBalance(Node node, int form) : fixed the balance by checking wich form of wrong
+ ( LNRs/RNLS/RNRS/LNLS ) and rotating.
+* checkBalance(Node node) : Checks if a given node is balanced. If it’s not
+, it calls fixBalance(Node node, int form) to balance it.
+* rotateLeft(Node node) : Rotate the subtree to the left.
+* rotateRight(Node node) : Rotate the subtree to the right.
+* height(int height, Node head) : the height of the sub-tree of the node.
+*the static method findMinNodes(int h): that get height and calculates the minimum number of nodes
+ in an AVL tree of heigh h,
+*the iterator: i have implement the iterator in nested class but their many problems facing me to 
+pass the tests although the nested class and the method is correct .. may be my copy constructor
+have problem i will try to fix them until assigment.
+I have one test fail in contains method and I assume that their is a problem with rotating funcion 
+tha their is something missing.
+
+----------
+
+****** answers of the questions:
+answer the questions :
+7 3 9 2 5 8 11 1 4 6 10 12
+in the tree at the example we must insert the elements at the same level one after one so i build 
+a tree with 12 elements with rotation and write the element one after one where theybe at the same 
+level.
+  
+Notice: I have looking for the Errors many time of the null and I sure that is the same mistake and 
+if I had get the mistake the three Errors will solved.
+
+in relative to the failer test Of size I don't know why it's fail although I read and analayze the 
+code many times.
+yet,, and the Hour is 23:20 in the late submission on 25/5/2014 I try to find the errors and assigm 
+the exercise... I hope I success..........................the problem that tree in copy constructor 
+is null or I mtsbeya3 on null!!!!!
+.... Why???

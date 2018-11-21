@@ -1,0 +1,33 @@
+aness.zurba, mutazmanaa
+===============================================================================
+Anass AlZurba, ID 20649999-8, Anass.Alzurba@mail.huji.ac.il
+Mutaz Manaa,   ID 20075045-3, Mutaz.manaa@mail.huji.aci 
+===============================================================================
+
+                      Project 1 - Elementary Logic Gates
+                      ---------------------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+And16.hdl       - 16-bit bit-wise And gate
+And.hdl         - And gate
+DMux4Way.hdl    - 4-Way Demultiplexor
+DMux8Way.hdl    - 8-Way Demultiplexor
+DMux.hdl        - Demultiplexor
+Mux16.hdl       - 16-bit Multiplexor
+Mux4Way16.hdl   - 4-Way 16-bit Multiplexor
+Mux8Way16.hdl   - 8-Way 16-bit Multiplexor
+Mux.hdl         - Multiplexor
+Not16.hdl       - 16-bit bit-wise Not gate
+Not.hdl         - Not gate
+Or16.hdl        - 16-bit bit-wise Or gate
+Or8Way.hdl      - 8-Way Or gate
+Or.hdl          - Or gate
+Xor.hdl         - Xor gate
+
+
+Remarks
+-------
+Nothing.

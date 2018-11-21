@@ -1,0 +1,28 @@
+
+--------------------------------------------------------------------
+       big             |             small           |             |
+   *         +         |        *               +    |             |
+--------------------------------------------------------------------
+                       |  0.00017            0.00023 | PARLLER     | 
+  1.123       0.0342   |                             |             |
+--------------------------------------------------------------------
+                       |1.059e-06           2.349e-06| SEQUANTQAL  | 
+  22.825      0.0333   |                             |             |
+--------------------------------------------------------------------
+
+the values time in secends
+==============
+answer for g:
+==============
+i)
+we can see that in the big.txt the two operation is faster in PARALLER WAY, 
+that's mean that creating threads help to improve the two proceesses. 
+But, in the small.txt we see that the SEQUANTQAL way, because the copiler will
+spend more time in creatin the threads, when the two proceesess in SEQ. way
+will be run immediately.                                 
+
+ii)yes, as we know that Add and Sub operation take O(a * b) complexity wherease 
+a and b is the dimissional of the matrices, but multibly takes O(a * b * c)
+for two matrices a,b * b,c. Inadittion the multibly of two numbers is more heavy
+than sub ar add two numbers.(O(n) and O(n^2).
+

@@ -1,0 +1,10 @@
+filter: creating normalized vector by (fs/2), getting the inputs in makefilter 
+I use fir1 given in the web using Hamming window in length 200,the most proper for this situation.
+I use the spectrogram given in the Ex to get spectrogram images
+In order to get best view over the main frequancies at each time point,
+we changed the window size and shape(rect , hamming).
+I have add figur in getMusic after getting Y and get a figure and I di it also before for songs loading in the exCheck.
+Finding the pitch for dScale:
+each time we stripped we took from the spectogram the maximum value
+- the y value is the current frequancy. 
+We looked at the point when each frequancy ended/startred  and the x value of that point gives us the relevant time.

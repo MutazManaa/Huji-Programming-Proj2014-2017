@@ -1,0 +1,60 @@
+mutazmanaa
+200750453
+
+===========Maatlab version and and Platform========
+Matlab version : R2015a
+Platform: Windows 10 
+===================================================
+
+=======================
+EX5 : submitted files:
+=======================
+1)createPyramid
+2)samplePatches
+3)createDB
+4)findNearestNeighbors
+5)weightsSetting
+6)getSamplingCenters
+7)getSamplingInformation
+8)getImage
+9)renderPyramidEx5
+10)superResolution
+11)transformPointsLevelsUp
+12)translateImageHalfPixel
+13)MyResults
+14)butterfly.png
+15)red_howler_small.jpg
+16)rose.jpg
+17)saber.jpg
+
+========================
+images examples:
+========================
+#example butterfly
+1)we can notice that that the big and repeated pattern are saved.
+we can see for example that the black patterns and butterfly wing's shape are biggest and sharper.
+
+2)we can notice that the small details are lost or blured like the detilas rouned the wing and the 
+small patches in round in the circle in the wing.
+
+#example1 strawberry
+1)I choose this image to emphasize the big success for the algorithim in repeatedly similar patches images
+we can notice that almost the whole image was superresolused good and the big images was sharp especialy the big 
+contious patches.
+
+2)despite the repeated similar patches but we can also notice that the small details blured like the 
+buttom right green leaves and we can notice that the green colour become smoothed and softer.
+
+#example2 Coin
+1)I choose this image especial to be an opposite to the prevous example, Notice that the big pattern in the coin (eagle)
+is saved and sharper and only the big patterns in the image saved. but the super reso;uation image not clear
+
+2)we can noticed stringly that the text or the rounded text are blured strongly and destored totally.
+see also the small detals ariund the eagle are destored strongly.
+
+I tried to choose two opposite examples that clarify when the algorithim is good and when it's not
+I hope that I am succes to choose.
+
+
+
+
